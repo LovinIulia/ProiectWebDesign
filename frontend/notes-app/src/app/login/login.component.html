@@ -1,0 +1,36 @@
+<p>login works!</p>
+
+    <input
+        required minlength="4"
+        matInput
+        name="inputUserName"
+        id="inputUserName"
+        [(ngModel)]="userName"
+        #inputUserName="ngModel"
+        placeholder="User name"
+    />
+    
+
+    <input
+    type="password"
+    required minlength="4"
+    matInput
+    name="inputUserPassword"
+    id="inputUserPassword"
+    [(ngModel)]="password"
+    #inputUserPassword="ngModel"
+    placeholder="User password"
+/>
+
+<div *ngIf="inputUserName.invalid && (inputUserName.dirty || inputUserName.touched)"
+class="alert">
+
+    <div *ngIf="inputUserName.errors?.['required']">
+        Title is required.
+    </div>
+    <div *ngIf="inputUserName.errors?.['minlength']">
+        Title must be at least 4 characters long.
+    </div>
+</div>
+
+<button mat-button (click)="login()">Login</button>

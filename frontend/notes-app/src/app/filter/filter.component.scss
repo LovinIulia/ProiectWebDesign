@@ -1,0 +1,14 @@
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .filter-div {
+        margin: 20px;
+    }
+}
+
+.search {
+    margin-left: 40px;
+    width: 270px; 
+    height: 30px; 
+}
