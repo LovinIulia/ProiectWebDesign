@@ -22,7 +22,6 @@ import { EditNoteComponent } from './edit-note/edit-note.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,8 +46,7 @@ import { LoginComponent } from './login/login.component';
     MatSelectModule,
     MatOptionModule,
     CommonModule,
-    HttpClientModule
-    
+    HttpClientModule,
   ],
   providers: [
 

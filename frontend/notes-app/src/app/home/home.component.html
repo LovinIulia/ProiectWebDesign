@@ -1,3 +1,27 @@
-<app-filter (emitSelectedFilter)="receiveCategory($event)" (emitSearchByInput)="receiveNote($event)"></app-filter>
-<app-tools></app-tools>
-<app-note [selectedCategory]="category" [selectedNote]="termSearch"></app-note>
+<input
+    *ngIf="!isUserLogged"
+    required minlength="4"
+    matInput
+    name="inputUserName"
+    id="inputUserName"
+    [(ngModel)]="userName"
+    #inputUserName="ngModel"
+    placeholder="User name"
+/>
+<br/>
+<input
+    *ngIf="!isUserLogged"
+    type="password"
+    required minlength="4"
+    matInput
+    name="inputUserPassword"
+    id="inputUserPassword"
+    [(ngModel)]="password"
+    #inputUserPassword="ngModel"
+    placeholder="User password"
+/>
+<br/>
+<button *ngIf="!isUserLogged" mat-button (click)="login()">Login</button>
+<app-filter *ngIf="isUserLogged" (emitSelectedFilter)="receiveCategory($event)" (emitSearchByInput)="receiveNote($event)"></app-filter>
+<app-tools *ngIf="isUserLogged"></app-tools>
+<app-note *ngIf="isUserLogged" [selectedCategory]="category" [selectedNote]="termSearch"></app-note>

@@ -18,5 +18,4 @@ export class ToolsComponent implements OnInit {
 
   setTitle() { this.title = "test"; }
 
-
 }
