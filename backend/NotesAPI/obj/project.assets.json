@@ -1379,11 +1379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proiect WEB Design\\backend\\NotesAPI\\NotesAPI.csproj",
+      "projectUniqueName": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAPI\\NotesAPI.csproj",
       "projectName": "NotesAPI",
-      "projectPath": "D:\\Proiect WEB Design\\backend\\NotesAPI\\NotesAPI.csproj",
+      "projectPath": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAPI\\NotesAPI.csproj",
       "packagesPath": "C:\\Users\\Iulia Lovin\\.nuget\\packages\\",
-      "outputPath": "D:\\Proiect WEB Design\\backend\\NotesAPI\\obj\\",
+      "outputPath": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

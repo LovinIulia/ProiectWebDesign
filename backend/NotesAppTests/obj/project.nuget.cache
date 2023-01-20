@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "acRCozijpW1HSNK3a2lNcNszo7COTfrlOcdUkjKmoDwKwTfJXGtRkbk93J44ThRuvEnnh0+7x5JzzU3W15Z34Q==",
+  "dgSpecHash": "Tqd2rTQyItv21YDbNMxwhn63VRzCXMpn2bradhJ32wfF9D1Vtuz8NcAbhIrMWaO1p/e1mnAdIfxHjS2t9Btjqw==",
   "success": true,
-  "projectFilePath": "D:\\Proiect WEB Design\\backend\\NotesAppTests\\NotesAppTests.csproj",
+  "projectFilePath": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAppTests\\NotesAppTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Iulia Lovin\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Iulia Lovin\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

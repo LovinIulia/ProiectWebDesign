@@ -4990,11 +4990,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proiect WEB Design\\backend\\NotesAppTests\\NotesAppTests.csproj",
+      "projectUniqueName": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAppTests\\NotesAppTests.csproj",
       "projectName": "NotesAppTests",
-      "projectPath": "D:\\Proiect WEB Design\\backend\\NotesAppTests\\NotesAppTests.csproj",
+      "projectPath": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAppTests\\NotesAppTests.csproj",
       "packagesPath": "C:\\Users\\Iulia Lovin\\.nuget\\packages\\",
-      "outputPath": "D:\\Proiect WEB Design\\backend\\NotesAppTests\\obj\\",
+      "outputPath": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAppTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5015,8 +5015,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Proiect WEB Design\\backend\\NotesAPI\\NotesAPI.csproj": {
-              "projectPath": "D:\\Proiect WEB Design\\backend\\NotesAPI\\NotesAPI.csproj"
+            "D:\\repositories\\ProiectWebDesign\\backend\\NotesAPI\\NotesAPI.csproj": {
+              "projectPath": "D:\\repositories\\ProiectWebDesign\\backend\\NotesAPI\\NotesAPI.csproj"
             }
           }
         }
