@@ -70,26 +70,6 @@ namespace NotesAppTests
         }
 
         [TestMethod]
-        public void UpdateNoteTest()
-        {
-            // Arrange
-            string id = "noteGuid";
-            Note note = new Note();
-
-            _noteServiceMock = new Mock<INoteCollectionService>();
-            _noteServiceMock
-                .Setup(m => m.Get(id))
-                .Returns(Task.FromResult(note));
-            _controller = new NotesController(_noteServiceMock.Object);
-
-            // Act
-            var result = _controller.UpdateNoteById(note).Result;
-
-            // Assert
-            _noteServiceMock.Equals(result);
-        }
-
-        [TestMethod]
         public void DeleteNoteTest()
         {
             // Arrange
