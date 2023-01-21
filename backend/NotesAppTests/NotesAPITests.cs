@@ -15,7 +15,7 @@ namespace NotesAppTests
         private NotesController _controller;
 
         [TestMethod]
-        public void TestMethod1()
+        public void GetNoteByIdIfTheIdIsValid()
         {
             // Arrange
             string id = "noteGuid";
@@ -27,7 +27,6 @@ namespace NotesAppTests
                 .Returns(Task.FromResult(note));
             _controller = new NotesController(_noteServiceMock.Object);
 
-
             // Act
             var result = _controller.GetNoteById(id).Result;
 
@@ -37,17 +36,15 @@ namespace NotesAppTests
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void ReturnsNotFoundForNoteWithInvalidId()
         {
             // Arrange
             string id = "noteGuid";
-
             _noteServiceMock = new Mock<INoteCollectionService>();
             _noteServiceMock
                 .Setup(m => m.Get(id))
                 .Returns(Task.FromResult((Note)null));
             _controller = new NotesController(_noteServiceMock.Object);
-
 
             // Act
             var result = _controller.GetNoteById(id).Result;
@@ -58,7 +55,7 @@ namespace NotesAppTests
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void CreateNoteTest()
         {
             // Arrange
             Note noteToBeCreated = new Note();
@@ -66,10 +63,50 @@ namespace NotesAppTests
             _controller = new NotesController(_noteServiceMock.Object);
 
             // Act
-            _ = _controller.CreateNote(noteToBeCreated);
+            var result = _controller.CreateNote(noteToBeCreated);
 
             // Assert
             _noteServiceMock.Verify(m => m.Create(noteToBeCreated), Moq.Times.Once);
+        }
+
+        [TestMethod]
+        public void UpdateNoteTest()
+        {
+            // Arrange
+            string id = "noteGuid";
+            Note note = new Note();
+
+            _noteServiceMock = new Mock<INoteCollectionService>();
+            _noteServiceMock
+                .Setup(m => m.Get(id))
+                .Returns(Task.FromResult(note));
+            _controller = new NotesController(_noteServiceMock.Object);
+
+            // Act
+            var result = _controller.UpdateNoteById(note).Result;
+
+            // Assert
+            _noteServiceMock.Equals(result);
+        }
+
+        [TestMethod]
+        public void DeleteNoteTest()
+        {
+            // Arrange
+            string id = "noteGuid";
+            Note note = new Note();
+
+            _noteServiceMock = new Mock<INoteCollectionService>();
+            _noteServiceMock
+                .Setup(m => m.Get(id))
+                .Returns(Task.FromResult(note));
+            _controller = new NotesController(_noteServiceMock.Object);
+
+            // Act
+            var result = _controller.DeleteNote(id);
+
+            // Assert
+            _noteServiceMock.Verify(m => m.Delete(id));
         }
     }
 }
